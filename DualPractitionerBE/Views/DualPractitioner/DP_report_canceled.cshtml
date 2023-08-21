@@ -1,0 +1,235 @@
+﻿@model DTO.DTOs.DP_Request
+@using Common.Types
+@using Common.Enums
+@{
+    var format = "dd/MM/yyyy";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="parant">
+        <div class="container">
+            <div class="topfram">
+                <img src="topfram" alt="topfram" />
+            </div>
+            <div class="logo" style="direction: ltr">
+                <img class="mohLogo imgLogo" alt="logo" />
+            </div>
+
+            <header>
+                    <h1>
+                        موافقة عمل خارج أوقات الدوام الرسمي
+                        <br />لممارس صحي حكومي
+                    </h1>
+
+                    <h3>بيانات الممارس</h3>      
+            </header>
+            <section>
+                <!--  START : Practitioner Data -->
+
+                <div class="PractitionerDatadiv">
+
+                    <div>
+
+                        <center class="div-a">الاسم</center>
+                        <center class="div-a">رقم الموافقة </center>
+                        <center class="div-a">التخصص</center>
+
+                    </div>
+
+                    <div>
+
+                        <center class="div-b">@Model.fullNameAr</center>
+                        <center class="div-b">@Model.serviceCode.Replace("DUP", "")</center>
+                        <center class="div-b">@Model.specialityAr</center>
+
+                    </div>
+                    <div style="border-top:1px solid #ddd; ">
+
+                        <center class="div-a">التصنيف </center>
+                        <center class="div-a"> عدد الساعات الاسبوعية المتاحة للممارس </center>
+                        <center class="div-a"> تاريخ الطلب</center>
+
+                    </div>
+
+                    <div>
+
+                        <center class="div-b">@Model.scfhsCategoryAr</center>
+                        <center class="div-b">@Model.totalWeeklyHours</center>
+                        <center class="div-b"> @Model.createDate.ToString(format) </center>
+
+                    </div>
+
+
+                </div>
+
+                <!--  END : Practitioner Data -->
+                <!--  START : DP Request Data -->
+
+                <div class="dates">
+
+
+                    <center class="div-a">
+                        مدة الموافقة :
+                        <span style="color: #535353; display: inline-block">
+                            @Model.durationMonths شهر
+                        </span>
+                    </center>
+                    <center class="div-a">
+                        تاريخ بداية الموافقة :
+                        <span style="color: #535353; display: inline-block">
+                            @if (Model.from != null)
+                            {
+                                @if (Model.from.ToString() != "1/1/0001 12:00:00 AM")
+                                {
+                                    var v = Convert.ToDateTime(Model.from).ToString(format);
+                                    @v
+                                }}
+
+                        </span>
+                    </center>
+                    <center class="div-a">
+                        تاريخ نهاية الموافقة :
+                        <span style="color: #535353; display: inline-block">
+                            @if (Model.to != null)
+                            {
+                                @if (Model.to.ToString() != "1/1/0001 12:00:00 AM")
+                                {
+                                    var v2 = Convert.ToDateTime(Model.to).ToString(format);
+                                    @v2
+                                }}
+
+                        </span>
+                    </center>
+
+
+                </div>
+
+                <!--  END : DP Request Data -->
+            </section>
+
+            <!--  START : Government Data -->
+            <section class="governmentAgency">
+                <h3>الجهة الحكومية المانحة</h3>
+                <div class="div-container">
+                    <div class="element1 border-right">
+                        الاسم
+                    </div>
+                    <div class="element2">
+                        @Model.govOrgNameAr
+                    </div>
+                    <div class="element1">
+                        نوع المنشأة
+                    </div>
+                    <div class="element2 border-left">
+                        @Model.govOrgTypeNameAr
+                    </div>
+                </div>
+            </section>
+            <!--  END : Government Data -->
+            <!--  START : Private Organization Data -->
+            <section class="Beneficiaryfacility">
+                <h3>المنشأة الخاصة المستفيدة</h3>
+                <div class="div-container">
+                    <div class="element1 border-top-right">
+                        الاسم
+                    </div>
+                    <div class="element2">
+                        @Model.priOrgNameAr
+                    </div>
+                    <div class="element1">
+                        رقم الترخيص
+                    </div>
+                    <div class="element2 border-top-left">
+                        @Model.licenseNumber
+                    </div>
+                </div>
+                <div class="div-container">
+                    <div class="element3 ">
+                        نوع المنشأة
+                    </div>
+                    <div class="element4 ">
+                        @Model.priOrgTypeNameAr
+                    </div>
+                </div>
+                <div class="div-container">
+                    <div class="element5 border-bottom-right">
+                        جدول عمل الممارس لدى المنشأة الخاصة
+                    </div>
+                    <div class="element6 border-bottom-left @(Model.workDays.Count() < 5 ? " extra-padding" : "" )">
+                        @foreach (var day in Model.workDays)
+                        {
+                            <span> @EnumHelper.GetEnumDescription((Days)day.Day) @day.From.ToShortTimeString() الى @day.To.ToShortTimeString()</span>
+
+                            if (day != Model.workDays.Last())
+                            {
+                                <span> - </span>
+                            }
+                            if (Model.workDays.Count() == 4)
+                            {
+                                if (day == Model.workDays.ElementAt(3))
+                                {
+                                    <br>
+                                }
+                            }
+
+                            @*if (Model.workDays.Count() < 4)
+                                {
+                                <br>
+                                }*@
+
+                        }
+                    </div>
+                </div>
+            </section>
+
+            <!--  END : Private Organization Data -->
+            <section class="qr">
+                <div class="img">
+                    <img src="data:image/png;base64,@Model.QrCode" alt="QR">
+                </div>
+
+                <p>
+                    الموافقة صادرة من النظام الآلي لوزارة الصحة ولا تحتاج إلى ختم رسمي،
+                    يمكن التحقق من <br />
+                    بيانات الموافقة عن طريق مسح الكود
+                </p>
+
+                <br />
+                <p>
+                    الموافقة الصادرة ليست وثيقة رسمية لعمل الممارس الحكومي في القطاع
+                    الخاص، ويجب<br />
+                    استخراج ترخيص مزاولة المهنة من خدمة التراخيص الصحية
+                </p>
+            </section>
+            <footer>
+                <div class="inline-block">
+                    <img class="sehaLogo imgLogo" alt="footerLogo">
+                </div>
+                <div class="inline-block float-left">
+                    <h4 class="mainColor">     تاريخ طباعة الموافقة  :  </h4>
+                    <p>@DateTime.Now.ToString(format)</p>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+    <div class="container-1">
+        <img class=" white_layer_img" />
+
+    </div>
+    <div class="container-2">
+        <img class="cancelled_img" />
+    </div>
+</body>
+</html>
+
+

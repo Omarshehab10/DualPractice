@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add_Request_Failed" xml:space="preserve">
+    <value>Failed to add request</value>
+  </data>
+  <data name="Balance_Not_Enough" xml:space="preserve">
+    <value>Organization Does Not Have Enough Balance to Proceed</value>
+  </data>
+  <data name="DUP_Report_Not_Found" xml:space="preserve">
+    <value>There Is No Approved Request with This Number</value>
+  </data>
+  <data name="Error_Generate_Pdf" xml:space="preserve">
+    <value>An Error occurred while generating the file, please try later</value>
+  </data>
+  <data name="Error_Yakeen_Data_Not_Found" xml:space="preserve">
+    <value>Please check identification number or date of birth</value>
+  </data>
+  <data name="Establishment_Data_Not_Found" xml:space="preserve">
+    <value>Please check CR number or license number of the organization</value>
+  </data>
+  <data name="Establishment_License_Expired" xml:space="preserve">
+    <value>Establishment License is Expired</value>
+  </data>
+  <data name="Establishment_Org_Id_Null" xml:space="preserve">
+    <value>Establishment Org Id is Null</value>
+  </data>
+  <data name="Establishment_Status_Error" xml:space="preserve">
+    <value>Establishment Status is not Final</value>
+  </data>
+  <data name="Gregorian_DOB_Not_Added" xml:space="preserve">
+    <value>The practitioner is not registered with a Gregorian date of birth</value>
+  </data>
+  <data name="Hijri_DOB_Not_Added" xml:space="preserve">
+    <value>The practitioner is not registered with a Hijri date of birth</value>
+  </data>
+  <data name="HLS_Data_Not_Found" xml:space="preserve">
+    <value>CR Number or License Number is Not Found</value>
+  </data>
+  <data name="Open_Request_Practitioner_Same_Organization" xml:space="preserve">
+    <value>Sorry, the facility has a previous request for the same practitioner</value>
+  </data>
+  <data name="Organization_LicenseNumber_Null" xml:space="preserve">
+    <value>Organization LicenseNumber is Null</value>
+  </data>
+  <data name="Organization_Not_Found" xml:space="preserve">
+    <value>Organization Data Not Found</value>
+  </data>
+  <data name="Practitioner_Already_Added" xml:space="preserve">
+    <value>This practitioner is already added to your facilities</value>
+  </data>
+  <data name="Practitioner_Already_Approved" xml:space="preserve">
+    <value>Sorry, the practitioner has valid approval</value>
+  </data>
+  <data name="Practitioner_Gov_Org_Is_Null" xml:space="preserve">
+    <value>Practitioner governmental organization is not registered in seha</value>
+  </data>
+  <data name="Practitioner_Has_Existing_Request" xml:space="preserve">
+    <value>Sorry the practitioner has an existing request </value>
+  </data>
+  <data name="Practitioner_Has_No_Approved_Requests" xml:space="preserve">
+    <value>This Practitioner has no approved requests</value>
+  </data>
+  <data name="Practitioner_Nationality_Not_Found" xml:space="preserve">
+    <value>Practitioner Nationality Not Found</value>
+  </data>
+  <data name="Practitioner_Not_Consultant" xml:space="preserve">
+    <value>Practitioner must be a Medical Consultant</value>
+  </data>
+  <data name="Practitioner_Not_In_Gov_Est" xml:space="preserve">
+    <value>Practitioner is not working in govermental establishment</value>
+  </data>
+  <data name="Practitioner_Not_Saudi" xml:space="preserve">
+    <value>Practitioner must be Saudi</value>
+  </data>
+  <data name="Practitioner_requests_Not_Found" xml:space="preserve">
+    <value>There's no requests for this practitioner</value>
+  </data>
+  <data name="Request_Rejected" xml:space="preserve">
+    <value>The request has been rejected successfully</value>
+  </data>
+  <data name="Request_Sent" xml:space="preserve">
+    <value>The request has been sent successfully</value>
+  </data>
+  <data name="Request_Status_Is_Not_Correct" xml:space="preserve">
+    <value>This Request status is not waiting practitioner approval</value>
+  </data>
+  <data name="Request_Status_Not_Waiting_Gov1_Review" xml:space="preserve">
+    <value>Request Status Must Be Waiting for Government Establishment Review</value>
+  </data>
+  <data name="Request_Status_Not_Waiting_Gov2_Review" xml:space="preserve">
+    <value>Request Status Must Be Waiting for Government Level Two Establishment Review</value>
+  </data>
+  <data name="Request_Status_Not_Waiting_Payment" xml:space="preserve">
+    <value>Request Status Must Be Waiting for Payment</value>
+  </data>
+  <data name="Scfhs_Registration_Expired" xml:space="preserve">
+    <value>Scfhs Registration Date is Expired</value>
+  </data>
+  <data name="Seha_GetOrganizationData_Error" xml:space="preserve">
+    <value>An Error occurred while getting the Organization Data from Seha</value>
+  </data>
+  <data name="Seha_InquireBalance_Error" xml:space="preserve">
+    <value>An Error occurred while checking the Organization Balance from Seha</value>
+  </data>
+  <data name="Seha_ServicePoints_Error" xml:space="preserve">
+    <value>An Error occurred while getting the service price from Seha</value>
+  </data>
+  <data name="Seha_User_Not_Found" xml:space="preserve">
+    <value>Seha User Not Found</value>
+  </data>
+  <data name="ServiceName" xml:space="preserve">
+    <value>Dual Practice</value>
+  </data>
+  <data name="There_No_Resuests" xml:space="preserve">
+    <value>There are no requests </value>
+  </data>
+  <data name="There_Two_Request_Same_Practitioner" xml:space="preserve">
+    <value>There is an existing or already accepted request in the system, please reject/cancel one of them</value>
+  </data>
+  <data name="This_Practitioner_Is_Not_Found" xml:space="preserve">
+    <value>This practitioner is not found</value>
+  </data>
+  <data name="This_Request_Is_Not_Found" xml:space="preserve">
+    <value>This request is not found, please check the request id</value>
+  </data>
+  <data name="Wrong_DOB" xml:space="preserve">
+    <value>Please check the entered Birth Date</value>
+  </data>
+  <data name="Max_Total_Hours_Per_Day" xml:space="preserve">
+    <value>The number of hours per day should not exceed 8 hours</value>
+  </data>
+  <data name="Practitioner_Has_Valid_Hls_License" xml:space="preserve">
+    <value>The practitioner has a valid license to practice the profession, please cancel it and try again</value>
+  </data>
+  <data name="License_Pri_Org_Is_Null" xml:space="preserve">
+    <value>The license expiry date for the facility is not registered</value>
+  </data>
+  <data name="Cancel_Request_Failed" xml:space="preserve">
+    <value>Failed to revoke consent</value>
+  </data>
+  <data name="Request_Canceled" xml:space="preserve">
+    <value>Approval has been successfully revoked</value>
+  </data>
+  <data name="Request_Status_Not_Approved" xml:space="preserve">
+    <value>Request Status Must Be Approved</value>
+  </data>
+  <data name="This_Practitioner_Is_Not_Found_In_Ethaq" xml:space="preserve">
+    <value>The practitioner is not registered in the Ethaq system</value>
+  </data>
+  <data name="Approval_Is_Less_Than_30_Days" xml:space="preserve">
+    <value>the approval cannot be canceled, because the remaining days for the approval to end are less than 30 days</value>
+  </data>
+  <data name="Email_Not_Send" xml:space="preserve">
+    <value>A problem occurred while sending the email to the user</value>
+  </data>
+  <data name="Email_Subject_New_Request" xml:space="preserve">
+    <value>New Request - Dual Practice System</value>
+  </data>
+  <data name="Email_Subject_Cancel_Request_By_GovOrg" xml:space="preserve">
+    <value>Cancellation of approval by the government organization</value>
+  </data>
+  <data name="Email_Subject_Cancel_Request_By_PrivOrg" xml:space="preserve">
+    <value>Cancellation of approval by the private organization</value>
+  </data>
+  <data name="Email_Update_On_TheStatus_Of_request_Subj" xml:space="preserve">
+    <value>Request updates - Khabeer Alseha</value>
+  </data>
+  <data name="Rejection_Reason_Id_required" xml:space="preserve">
+    <value>Rejection Reason id is required</value>
+  </data>
+  <data name="Wrong_Rejection_Reason_Id" xml:space="preserve">
+    <value>Rejection Reason id is wrong</value>
+  </data>
+  <data name="Request_Aproved" xml:space="preserve">
+    <value>The request has been approved successfully</value>
+  </data>
+</root>
